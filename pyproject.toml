@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "subr3con"
+version = "0.1.0"
+description = "Modern subdomain reconnaissance tool"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "gorcx" }]
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = [
+    "requests>=2.31,<3",
+    "dnspython>=2.4,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+    "build>=1.2,<2",
+    "ruff>=0.15,<1",
+]
+
+[project.scripts]
+subr3con = "subr3con.cli:main"
+
+[tool.ruff]
+line-length = 140
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+
+[tool.setuptools.package-data]
+subr3con = ["data/names.txt", "data/resolvers.txt"]
+
+[tool.setuptools.packages.find]
+include = ["subr3con*"]

@@ -1,0 +1,15 @@
+# Cloudflare 1.1.1.1 (standard, no filtering)
+1.1.1.1
+1.0.0.1
+
+# Google Public DNS
+8.8.8.8
+8.8.4.4
+
+# Cisco OpenDNS
+208.67.222.222
+208.67.220.220
+
+# Quad9 9.9.9.10 (no threat blocking)
+9.9.9.10
+149.112.112.10
